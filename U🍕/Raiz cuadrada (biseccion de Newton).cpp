@@ -8,8 +8,7 @@ void Calcular(double y, double a, double b);
 double eval(double r, double x);
 double f(double a, double b, double x);
 
-double numero, liminf = 0, limsup = 1000, raiz, aprox;
-int cont=0;
+double numero, liminf = 0, limsup = 1000, raiz, aprox; int cont=0;
 
 int main() { MostrarOpc(); }
 
@@ -29,10 +28,8 @@ void MostrarOpc()
 
 void Calcular(double y, double a, double b)
 {
-	double x = y;
-	double r = (a+b)/2; 
-	cont = cont + 1;
-
+	double x = y, r = (a+b)/2; cont = cont + 1;
+	
 	cout << "\n\n\n\n --- Iteracion numero (" << cont << ") --- ";
 	cout << "\n\n r(" << cont << ") = " << r;
 	cout << " : Evaluando a r(" << cont << ") = " << r << " ... ";	
@@ -65,7 +62,6 @@ void Calcular(double y, double a, double b)
 	while (eval(r,x) < -0.001 && aprox > 0.001);
 }
 
-
 double f(double a, double b, double x) //evaluacion de las funciones
 {
 	double eval1 = ((a*a) - x); //evaluamos lim a
@@ -83,11 +79,3 @@ double eval(double r, double x) //evaluacion "directa" de r(n). Para saber la si
 	aprox = eval;
 	return eval;
 }
-
-
-
-
-
-
-
-
